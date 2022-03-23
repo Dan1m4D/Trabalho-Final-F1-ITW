@@ -1,0 +1,10 @@
+.carousel { width: 100%; margin: 0 auto; }
+.carousel-item { z-index: -100; height: 480px; background-position: center center; background-repeat: no-repeat; background-size: cover; }
+.carousel-item:nth-child(1) { background-image: url('https://mb.web.sapo.io/9644ccedd8923e117ecd2d8431295b77d06b4510.jpg'); }
+.carousel-item:nth-child(2) { background-image: url('https://staticp.0aos100.pt/posts/1633549094f1hamiltonvetteljpg_1980x600.jpg'); }
+.carousel-item:nth-child(3) { background-image: url('https://mb.web.sapo.io/20bec17326e461c884b7ec6ede85727b32cffb1e.jpg'); }
+.carousel-item:nth-child(4) { background-image: url('https://static.globalnoticias.pt/tsf/image.jpg?brand=TSF&type=generate&guid=1fb55adf-d0a0-451a-bfa5-a78033ecb357'); }
+
+a.link-dif{
+    color: black;
+}

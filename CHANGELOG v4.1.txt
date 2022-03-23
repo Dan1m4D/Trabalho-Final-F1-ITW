@@ -1,0 +1,7 @@
+CHANGELOG
+=========================================
+-Formatação de todas as páginas html tanto na navbar como no footer
+-No footer adição dos links para os GitsHubs dos membros da equipa através de um modal
+-Adição de um form de subscrição com validação
+-Adição de mapas nos Circuits
+-Formatação das páginas Circuits e Constructers

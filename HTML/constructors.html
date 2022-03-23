@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../../../lib/JQueryUI/jquery-ui.min.css" rel="stylesheet" >
+
+    <link rel="icon" href="../Images/logo/1200px-F1_tire_Pirelli_PZero_Red.svg.ico">
+    <link rel="stylesheet" href="../CSS/f1all.css" />
+    
+    <title>Constructors</title>
+</head>
+<body>
+    <!-- MENU-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="HomePage.html">
+                <img class="brand" src="../Images/logo/1200px-F1_tire_Pirelli_PZero_Red.svg.ico" alt="F1_lOGO">
+                <span class="brand_txt"> F1Web</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="drivers.html">Drivers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="constructors.html">Constructers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="seasons.html">Seasons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CircuitSpotlight.html">Circuits</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" data-bs-toggle="modal" data-bs-target="#LoginModal">Recive our news!</a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+
+    <!-- Work Area -->
+    <div class="container bg-light">
+        <thead class="bg-danger text-center justify-content-center mx-2"><h2>Constructors</h2></thead><hr>
+    </div>
+    <div class="container d-flex justify-content-center bg-light">
+        <div class="row" data-bind="foreach:constructors">
+            <div class="col-4 my-2">
+                <div class="card hvr-grow" data-bind="click:ContructorDetails" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img style="width: auto; height: 240px;" data-bind="attr:{src : ImageUrl}" class="card-img-top" >
+                    <div class="card-footer">
+                        <h5 class="card-title" data-bind="text:Name">Nome</h5>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Constructors -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+                <div class=" modal-header bg-warning my-1">
+                    <h2 data-bind="text: nome"></h2>
+                </div>
+                <div class="container my-2" style="width: 500px; height: 240px;">
+                    <img class="card-img-top" data-bind="attr:{src:img}" style="height: 240px; background-size: cover;">
+
+                </div>
+
+                <div class="modal-body"><hr>
+                <div class="container">
+                    <div class="row">
+                        <h4>Nacionalidade:</h4>
+                        <span class="text-secondary"><p data-bind="text:nacionalidade "></p></span>
+                    </div>
+                    <div class="row">
+                        <h6>Id:<span class="text-secondary"><p data-bind="text:ConstructorId "></p></span></h6>
+                        
+                    </div>
+                    <div>
+                        <h4>Constructor's Drivers:</h4>
+                        <ol class="list-group list-group-numbered" style="border: white;" data-bind="foreach:drivers">
+                            <li class="list-group-item"><p data-bind="text:Name"></p></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-light">
+                    <h5 class="modal-title" id="ModalLabel">Registo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body">     
+            
+                        <div class="form-outline mb-2">
+                            <input type="email" id="email" class="form-control form-control-lg login" placeholder="Email" required/>
+                            <div class="d-none small text-danger col-form-label" id="EmailError"><i class="fa fa-exclamation-triangle"></i>Email inválido. Verifique se o email inserido está correto.</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center form-check-inline">
+                            <div class="git form-check mb-0">
+                                <input class="form-check-input" type="checkbox" value="1" id="terms" required/>
+                                <label class="form-check-label" for="terms">Aceito o processamento dos meus dados</label>
+                            </div>
+                            <div class="git form-check mb-0">
+                                <input class="form-check-input" type="checkbox" value="2" id="pub" />
+                                <label class="form-check-label" for="pub">Aceito que me enviem notificações de publicidades</label>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Github -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                    <div class="modal-header bg-danger">
+                            <h5 class="modal-title">Team GitHubs</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                <div class="modal-body bg-dark">
+                    <div class="container-fluid text-center">
+                        <div class="row">
+                            <div class="card text-center col-6 mr-1">
+                                <img class="card-img-top" src="holder.js/100px180/" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">Daniel<br>Madureira</h4>
+                                    <h2 class="card-title"><a href="https://github.com/Dan1m4D"><i class="fa fa-github"></i></a></h2>
+                                </div>
+                            </div>
+                            <div class="card text-center col-6">
+                                <img class="card-img-top" src="holder.js/100px180/" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">Rafael<br>Kauati</h4>
+                                    <h2 class="card-title"><a href="https://github.com/Rafael-Kauati"><i class="fa fa-github"></i></a></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- BOTTOM MENU -->
+
+    <footer class=" py-2 justify-content-center text-center bg-dark">
+        <div class="container">
+            <div class="navbar-text">&copy;  Introdução as Tecnologias Web - 2021/22</div>
+            <div class=" fs-1 w3-section mx-5">
+                <a href="https://www.facebook.com/Formula1"><i class="fa fa-facebook-official "></i></a>
+                <a href="https://www.instagram.com/f1/?hl=pt"><i class="fa fa-instagram "></i></a>
+                <a id="githubico" data-bs-toggle="modal" data-bs-target="#modelId"><i class="fa fa-github "></i></a>
+            </div>
+            <div class=" navbar-text"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro <i class="fa fa-heart danger"></i> </a></div>
+        </div>
+    </footer>
+    
+    <script src="../../../lib/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../lib/JQuery/jquery-3.6.0.js"></script>
+    <script src="../../../lib/JQueryUI/jquery-ui.min.js"></script>
+    <script src="../../../lib/Knockout/knockout-3.5.1.js"></script>
+    <script src="../JS/contructorsController.js"></script>
+</body>
+</html>

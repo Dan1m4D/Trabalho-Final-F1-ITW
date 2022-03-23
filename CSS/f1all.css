@@ -1,0 +1,49 @@
+body {
+    font-family: poppins;
+    background-color: wheat;
+    background-image: url("https://cdn.wallpapersafari.com/99/60/UVBYh7.png");
+}
+
+
+.brand {
+    max-height: 25px;
+    max-width: 25px;
+    vertical-align:text-top;
+}
+.brand_txt{
+    font-size: larger;
+    text-align: center;}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover{
+    color: rgb(179, 179, 179);
+}
+
+.modal .fa-github{
+    color: black;
+}
+
+.git {
+    height: 200rem;
+}
+
+#githubico{
+    color: rgb(255, 255, 255);
+}
+
+#githubico:hover{
+    color: rgb(179, 179, 179);
+}
+
+footer {
+    position:static;
+    width: 100%;
+    bottom: 0px;
+    z-index: -13000;
+    color: rgb(255, 255, 255);
+    background-color: black;
+  }

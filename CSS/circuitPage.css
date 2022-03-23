@@ -1,0 +1,44 @@
+img{
+    width: 600px;
+    
+}
+
+.container-fluid{
+    padding-left: 20px;
+}
+
+.badige{
+    font-size: medium;
+}
+
+body{
+    background-color: gray;
+}
+
+tr{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.raceBadge{
+    font-size: large;
+    border: 15px;
+}
+
+.brand {
+    max-height: 25px;
+    max-width: 25px;
+    vertical-align:text-top;
+}
+body {
+    font-family: poppins;
+    background-color: wheat;
+}
+
+.table-row:hover{
+    background-color: rgb(105, 22, 22);
+}
+
+#map { 
+    height: 180px; 
+}
